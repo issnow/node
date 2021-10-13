@@ -1,0 +1,36 @@
+Request Headers请求头(放置请求相关的信息)
+1.get请求示例
+GET / HTTP/1.1
+Host: www.mi.com
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7
+Cookie: xmuuid=XMGUEST-55F92D70-A88D-11EA-B4D8-C30D21D7D8CB; mstuid=1591513558450_9346; XM_agreement_sure=1; euid=yagXrVrYSXM2IOHb71fVKA%3D%3D; XM_795899693_UN=%E9%83%AD%E6%88%90; lastsource=www.baidu.com; mcc_chat_fe_slh=5TmYPJua5D3OLOat8DaTitZ5v7U=; xm_user_www_num=1; userId=795899693; cUserId=58nnBMCf-B5_t8gYbT7pjSQmc4U; xm_order_btauth=3e638e7eab607f1ce46b38e893e7b748; xm_link_history=Zc5WhLOJKL285NS7YHIrP4ejx8w37lLNAjjeaotlOes%3D; axmuid=tO4JimHdRa2Ke3I5bspZnAbHMau8qYUodpQinT41vmE%3D; userUUID=0cc1ac66-dc94-4115-ae82-6d5557ffd093; mUserId=%2FfDC2fiKMEHwN%2FRdfigBZb%2FXBOFr7SZZ9AFLw4z%2BZzY%3D; pageid=81190ccc4d52f577; msttime=https%3A%2F%2Fwww.mi.com%2F; msttime1=https%3A%2F%2Fwww.mi.com%2F; mstz=||539405871.370|||; xm_vistor=1591513558450_9346_1595234435252-1595234440417
+
+2.post请求示例
+POST /pass/serviceLoginAuth2?_dc=1595236492449 HTTP/1.1
+Host: account.xiaomi.com
+Connection: keep-alive
+Content-Length: 1520
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
+Content-type: application/x-www-form-urlencoded
+Accept: */*
+Origin: https://account.xiaomi.com
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://account.xiaomi.com/pass/serviceLogin?callback=https%3A%2F%2Forder.mi.com%2Flogin%2Fcallback%3Ffollowup%3Dhttps%253A%252F%252Fwww.mi.com%252Findex.html%26sign%3DMjM0MWU0NjBlOTU1YzY4NGQzOTc3MDk4N2M2MjQ5Y2ZiZTMxNTFlZQ%2C%2C&sid=mi_eshop&_bannerBiz=mistore&_qrsize=180
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7
+Cookie: pass_ua=web; deviceId=wb_505145ee-5e9d-4aec-aefd-4796b1833637; userName=176***889; JSESSIONID=aaadVTqpiJ3uQeZuT2Ikx; pExpireTime=-1; passInfo=login-end; ick=e3HNy+L5NI6PPjyo4xXtSAWV0kWrBBW7xlRt5Aeih6cQwFtfFo54se+38tMKAFDA7wqJEV8iq2kVBHVrDg9teiq5WNXzDS2ODTJBSNWj+vKrd0ylLazfr5jatyBhH49mLjOAmNK74NJrllBrLuko/zcJcRu1CAxqOwiIWSyWhpcmnlxj5wwuyyWcFwzo6dKFEk0Rs/E5etWx6ZDWOp52Yw==; uLocale=zh_CN; tick=5644930911154141848; pass_trace=jIWVPCswdsn3BrCYXbEBPdRwQR1MkH53hiyJYSv162VTdPY6aZZV8jDrsWc6f6lE9lTGtpYXpast0civjfSJLKgEKWHlSRhm+nt/oTU1gf89X9q9iLMTX3ClvnWIyc9q; theme=mistore; vToken=FwsVoS1MfvagQvgI%2BCxydS3Ohp0XddjuwQiu4s%2FxOkhAoPwDtELnepXCv9bH62nttqlHtb0q7717KjlwaMrTESgrAjA%2BODwY1mcLn%2B6beQEFxHolgrRHQxkFiNqISxGj1v%2F8WcSutkZlZoU1bvY%2FH7A2UdWsi0bZlFPewyjdPsFSsXrOeaE7EJMN1g6K4o0UkJJe02V3Jq2kltVxfq3WQI%2FIz7B5mASPuLFXIz5ZawZDtvtJxObaHaG203aUh%2BWEz7wb9nhdjvCGRnNI5YzJaw%3D%3D; vAction=cn-pwd-login
+
+Form Data请求体(一般是post表单传输的数据)
+_json=true&callback=https%3A%2F%2Forder.mi.com%2Flogin%2Fcallback%3Ffollowup%3Dhttps%253A%252F%252Fwww.mi.com%252Findex.html%26sign%3DMjM0MWU0NjBlOTU1YzY4NGQzOTc3MDk4N2M2MjQ5Y2ZiZTMxNTFlZQ%2C%2C&sid=mi_eshop&qs=%253Fcallback%253Dhttps%25253A%25252F%25252Forder.mi.com%25252Flogin%25252Fcallback%25253Ffollowup%25253Dhttps%2525253A%2525252F%2525252Fwww.mi.com%2525252Findex.html%252526sign%25253DMjM0MWU0NjBlOTU1YzY4NGQzOTc3MDk4N2M2MjQ5Y2ZiZTMxNTFlZQ%25252C%25252C%2526sid%253Dmi_eshop%2526_bannerBiz%253Dmistore%2526_qrsize%253D180&_sign=RGfMpi9Bf4f63t6MqC02xCDiBmc%3D&serviceParam=%7B%22checkSafePhone%22%3Afalse%7D&user=17620376889&hash=F5BB0C8DE146C67B44BABBF4E6584CC0&cc=&log=%7B%22title%22%3A%22dataCenterZone%22%2C%22message%22%3A%22China%22%7D%7B%22title%22%3A%22locale%22%2C%22message%22%3A%22zh_CN%22%7D%7B%22title%22%3A%22env%22%2C%22message%22%3A%22release%22%7D%7B%22title%22%3A%22browser%22%2C%22message%22%3A%7B%22name%22%3A%22Chrome%22%2C%22version%22%3A83%7D%7D%7B%22title%22%3A%22search%22%2C%22message%22%3A%22%3Fcallback%3Dhttps%253A%252F%252Forder.mi.com%252Flogin%252Fcallback%253Ffollowup%253Dhttps%25253A%25252F%25252Fwww.mi.com%25252Findex.html%2526sign%253DMjM0MWU0NjBlOTU1YzY4NGQzOTc3MDk4N2M2MjQ5Y2ZiZTMxNTFlZQ%252C%252C%26sid%3Dmi_eshop%26_bannerBiz%3Dmistore%26_qrsize%3D180%22%7D%7B%22title%22%3A%22outerlinkDone%22%2C%22message%22%3A%22done%22%7D%7B%22title%22%3A%22addInputChange%22%2C%22message%22%3A%22userName%22%7D%7B%22title%22%3A%22loginOrigin%22%2C%22message%22%3A%22loginMain%22%7D

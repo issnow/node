@@ -1,0 +1,22 @@
+Response Headers(响应行,响应头)
+HTTP/1.1 200 OK
+Date: Mon, 20 Jul 2020 11:20:54 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Expires: Mon, 20 Jul 2020 11:22:54 GMT
+Cache-Control: max-age=120
+X-Cacheable: MI-WWW-Cacheable
+Server: MIFE/3.0
+X-Frame-Options: SAMEORIGIN
+Content-Encoding: gzip
+X-Cache: MISS from cache.51cdn.com
+X-Via: 1.1 wangtong166:3 (Cdn Cache Server V2.0), 1.1 PSbjzjmwtls38:1 (Cdn Cache Server V2.0)
+X-Ws-Request-Id: 5f157e16_PSbjzjmwtls38_26305-45440
+空行
+
+响应正文
+<html lang="zh-CN" xml:lang="zh-CN">
+<head></head>
+<body>... </body>
+</html>

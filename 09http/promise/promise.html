@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script src='./02async_promise.js'></script>
+  <!-- <script src="./mypromise.js"></script> -->
+  <script>
+    let p1 = new Promise_((res,rej)=>{
+      res(123)
+    })
+    p1.then(res=>{
+      document.body.style.background = 'greenyellow'
+      console.log('这是成功做的事情')
+      console.log(res, '1')
+      return new Promise_(res=>res(456))
+    }).then(res=>{
+      console.log(res, '2')
+    })
+    // p1.catch((res)=>{
+    //   document.body.style.background = 'pink'
+    //   console.log('这是失败做的事情')
+    //   console.log(res)
+    // })
+    // let p2 = p1.then(res=>{
+    //   document.body.style.background = 'greenyellow'
+    //   console.log('这是成功做的事情')
+    //   console.log(res)
+    //   return res
+    // }, err=>{
+    //   throw new Error('sdf')
+    // })
+    // setTimeout(() => {
+    //   console.log(p2, 'return')
+    // });
+  </script>
+</body>
+</html>

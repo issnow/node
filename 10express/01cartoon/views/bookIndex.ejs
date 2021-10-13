@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- 解决图片防盗链 -->
+  <meta name="referrer" content="no-referrer" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- css的路径是相对于public目录 -->
+  <!--app.use(express.static(path.join(__dirname, 'public'))) -->
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <div class="waves"></div>
+  <div class="header">
+    <div class="navheader"></div>
+    <div class="nav"></div>
+  </div>
+  <div class="body">
+    <ul class="list">
+      <% for(var i = 0; i< arr.length;i++){ %> 
+        <li class="item">
+          <!-- 解决图片防盗链 -->
+          <a href="<%- 'c/'+arr[i].id %> ">
+            <img referrer="no-referrer|origin|unsafe-url" src="<%- arr[i].img %> " alt="">
+          </a>
+          <a class="book_name" href="<%- arr[i].book_url  %>" title='<%- arr[i].bookname %>'><%- arr[i].bookname %> </a>
+          <div class="author">
+            <%- arr[i].author %> 
+          </div>
+        </li>
+      <% } %> 
+    </ul>
+  </div>
+  <div class="footer">
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio veritatis iste officiis voluptas. Veritatis eos accusantium non, eligendi, libero repellat corrupti, consequatur fugit laborum sit quisquam suscipit deserunt porro nostrum.
+  </div>
+</body>
+</html>
+<!-- js的路径是相对于public目录 -->
+<script src="js/wave.js"></script>

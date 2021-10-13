@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h3>ajax请求页面</h3>
+  <script>
+    let xhr = new XMLHttpRequest()
+    xhr.open('get','http://localhost:3000/search1?searchKey=AREA&username=')
+    xhr.onload = function () {
+      if(xhr.status == 200) {
+        console.log(JSON.parse(xhr.responseText))
+      }
+    }
+    xhr.send(null)
+  </script>
+</body>
+</html>

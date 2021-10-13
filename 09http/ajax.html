@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    /**
+     * 1.onload和onreadystatechange的区别
+     * onreadystatechange()的定义是只要返回的状态码只要变化时就回调一次函数，而onload只有状态码为4时才能回调一次函数
+     * XMLHttpRequest对象有一个属性readyState，将其(xhr.readyState)打印后发现。进入onreadystatechange请求方式中时，可以打印其状态为2，状态为3，状态为4。
+     * 进入onload之后，只出现了状态码4。也就是说，只有处于状态码4，请求已完成，响应已就绪的情况下，才会进入onload。只要进入onload请求中，一定是已经到4这个状态了
+     * 
+     */
+
+    // let res = null
+    // var xhr = new XMLHttpRequest()
+    // xhr.open('get','./music.json')
+    // xhr.onreadystatechange = function(){
+    //   if(xhr.readyState===4&&/^2\d{2}$/.test(xhr.status)) {
+    //     console.log(JSON.parse(xhr.responseText), "2")
+    //     res = xhr.responseText
+    //   }
+    // }
+    // xhr.send(null)
+
+    function get(url) {
+      return new Promise((resolve,reject)=>{
+        let xhr = new XMLHttpRequest()
+        xhr.open('get', url)
+        xhr.onload=function(){
+          if(xhr.status=== 200) {
+            resolve(xhr.responseText)
+          }else {
+            reject(Error(xhr.statusText))
+          }
+        }
+        xhr.onerror=function(){
+          reject('Network error')
+        }
+        xhr.send(null)
+      })
+    }
+
+    async function getData() {
+      // let p = await get('./music.json')
+      // get('./music.json').then(res=>{
+      //   console.log(res)
+      // }, err=>{
+      //   console.log(err)
+      // })
+      // console.log(p, '---')
+
+      // 这个操作很棒 
+      get('./music.json').then(JSON.parse).then(res=>{
+        console.log(res)
+      })
+    }
+    getData()
+    let p1 = new Promise((resolve,reject)=>{
+      resolve(1)
+    })
+    // p1.then(d=>{
+    //   return new Promise((res,rej)=>{
+    //     res(d)
+    //   })
+    // }).catch(err=>{
+    //   console.log(err, 'err')
+    //   return err
+    // }).then(res=>{
+    //   console.log(res, '----')
+    //   return res
+    // })
+    // new Promise((resolve)=>resolve(8))
+    //   .then()
+    //   .then()
+    //   .then(v=>alert(v))
+
+
+    class Fn {
+      constructor(v) {
+        console.log(v)
+      }
+
+      fn() {
+        new Fn(2)
+      }
+    }
+    console.log(new Fn().fn())
+  </script>
+</body>
+</html>

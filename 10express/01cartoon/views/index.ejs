@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='css/style.css' />
+  </head>
+  <body>
+    <h3><%= title %></h3>
+    <p>Welcome to <%= title %></p>
+    <h3>横杠的插入方式</h3>
+    <!-- 横杠是直接插入数据,等号是将html相关标签进行转义显示 -->
+    <div>
+      <%- articleTitle %>
+    </div>
+    <h3>等号的插入方式</h3>
+    <div>
+      <%= articleTitle %>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/detail.css">
+</head>
+<body>
+  <div class="main">
+    <div class="tit">
+      这是详情页
+    </div>
+    <div class="book">
+      <div class="left">
+        <img referrer="no-referrer|origin|unsafe-url" src="<%- d.img %> " alt="">
+      </div>
+      <div class="right">
+        <p class="name"><%- d.bookname  %> </p>
+        <div class="author">
+          作者: <%- d.author  %> 
+        </div>
+        <p class="ft">
+          <span class="status">状态:<%- d.status  %> </span>
+          <span class="area">地区:<%- d.area  %></span>
+          <span class="public_time">最后出版:<%- d.public_time  %></span>
+          <span class="classify">分类:<%- d.classify  %></span>
+        </p>
+        <p class="ft">
+          <span class="subscribe">订阅:<%- d.subscribe  %></span>
+          <span class="collection">收藏:<%- d.collection  %></span>
+          <span class="hot">热度:<%- d.hot  %></span>
+        </p>
+      </div>
+    </div>
+    <p class="intro ft">
+      <%- d.brief_introduction %> 
+    </p>
+  </div>  
+</body>
+</html>

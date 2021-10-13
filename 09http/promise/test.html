@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script src='./promiseG.js'></script>
+  <!-- <script src='./02async_promise.js'></script> -->
+  <script>
+
+    let p1 = new Promise_((rs,rj)=>{
+      rj(123)
+    })
+    // p1.then(res=>{
+    //   document.body.style.background = 'yellowgreen'
+    //   console.log(res)
+    // })
+    p1.catch(res=>{
+      document.body.style.background = 'pink'
+      console.log(res)
+    })
+  </script>
+</body>
+</html>

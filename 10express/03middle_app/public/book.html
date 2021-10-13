@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>book</title>
+</head>
+<body>
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $.get('/api/book/10/3').then(d=>{
+      let ele
+      d.forEach(e=>{
+        ele = document.createElement('h3')
+        ele.innerHTML = e.bookname
+        document.body.appendChild(ele)
+      })
+    })
+    fetch('/api/book/10/2').then(res=>res.json()).then(res=>{
+      console.log(res, 'fetch')
+    })
+  </script>
+</body>
+</html>

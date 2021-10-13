@@ -1,0 +1,12 @@
+{
+  "name": "gcfs",
+  "version": "1.0.2",
+  "description": "将原生的fs模块,进行promise封装,可以快速使用",
+  "main": "gcfs.js",
+  "scripts": {
+    "test": "echo \"Error: no  test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "issnow",
+  "license": "ISC"
+}

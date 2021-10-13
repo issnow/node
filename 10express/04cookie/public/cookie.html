@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // let expires = new Date()
+    // expires.setDate(expires.getDate()+7)
+    // let domain = 'localhost'
+    // let str = `user=张三;expires=${expires};domain=${domain}`
+    // document.cookie = str
+    let str = document.cookie
+    function parseCookie(str) {
+      // let obj = {}
+      let arr = str.split(';')
+      // arr.forEach(e=>{
+      //   let key = e.split('=')[0]
+      //   let value = e.split('=')[1]
+      //   obj.key = value
+      // })
+      return arr.reduce((p,n)=>{
+        let key = n.split('=')[0]
+        let value = n.split('=')[1]
+        p[key] = value
+        return p
+      },{})
+      // return obj
+    }
+    console.log(parseCookie(str))
+
+    function setCookie(key,val,expires,domain,path) {
+      let str = `${key}=${val}`
+      if(expires&&expires instanceof Date) {
+        str += `;expires=${expires}`
+      }
+      if(domain) {
+        str += `;domain=${domain}`
+      }
+      if(path) {
+        str += `;path=${path}`
+      }
+      document.cookie = str
+    }
+    function getCookie(key) {
+      let str = document.cookie
+      let arr = str.split('; ')
+      for(let e of arr) {
+        if(e.split('=')[0] === key) {
+          return e.split('=')[1]
+        }
+      }
+    }
+  </script>
+</body>
+</html>
