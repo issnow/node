@@ -47,7 +47,7 @@ con.connect(e=>{
 // })
 
 // #2删除表
-// let strSql1 = 'drop table table2'// user是表的名字
+// let strSql1 = 'drop table user'// user是表的名字
 // con.query(strSql1, (e,res)=>{
 //   console.log(e)
 //   console.log(res)
