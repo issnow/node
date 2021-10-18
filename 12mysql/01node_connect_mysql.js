@@ -1,3 +1,8 @@
+/*
+ * @Author: snow
+ * @Date: 2021-10-17 22:41:55
+ * @Description: 基本操作
+ */
 /**
  * 教你用node操作数据库,主要是mysql语句
  */
@@ -46,27 +51,27 @@ con.connect(e=>{
 //   console.log(res)
 // })
 
-// #2删除表
+// *2删除表
 // let strSql1 = 'drop table user'// user是表的名字
 // con.query(strSql1, (e,res)=>{
 //   console.log(e)
 //   console.log(res)
 // })
 
-// #3删除库
+// *3删除库
 // let strSql2 = 'drop database people'//people是库的名字
 // con.query(strSql2, (e,res)=>{
 //   console.log(e)
 //   console.log(res)
 // })
-// #4创建库
+// *4创建库
 // let strSql3 = 'create database mall2'
 // con.query(strSql3, (e,res)=>{
 //   console.log(e)
 //   console.log(res)
 // })
 
-// #5创建表 注意需要指定PRIMARY KEY(id),并且这个primary key NOT NULL
+// *5创建表 注意需要指定PRIMARY KEY(id),并且这个primary key NOT NULL
 // let strSql4 = `CREATE TABLE table3  (
 //   id int NOT NULL AUTO_INCREMENT,
 //   username varchar(255) NULL,
@@ -79,7 +84,7 @@ con.connect(e=>{
 //   console.log(res)
 // })
 
-// #6插入数据
+// *6插入数据
 // let strSql5 = 'insert into table3 (id,username,password) values (3,"laocheng","1234567")'
 // con.query(strSql5,(e,res)=>{
 //   console.log(e)

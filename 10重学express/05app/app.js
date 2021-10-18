@@ -4,6 +4,7 @@
  * @Description: 
  */
 const express = require('express');
+const sqlQuery = require('./gcmysql');
 const app = express()
 
 // 1.字符串路径
@@ -40,5 +41,14 @@ app.get('/user/:cateID/a:newsID', (req,res,next)=>{
   const {newsID, cateID} =req.params
   console.log(newsID)
   res.send('新闻id页面:'+newsID+'分类id:'+cateID+'req.lchost:'+req.lchost)
+})
+
+
+app.get('/search', async(req, res)=>{
+  console.log(req.query)
+  let str = `select * from book where bookname like '%${req.query.searchKey}%'`
+  let d = await sqlQuery(str)
+  console.log(d, 'd')
+  res.json(Array.from(d))
 })
 module.exports = app
